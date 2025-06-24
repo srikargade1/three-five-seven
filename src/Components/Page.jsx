@@ -9,7 +9,6 @@ export default function Page()
             <div className = "main-content">
                 <Header />
                 <GameGrid />
-                <Footer />
             </div>
             
         </div>

@@ -2,22 +2,23 @@ import { useState } from "react";
 
 export default function FiveGrid()
 {
-    const [one, setOne] = useState(false);
-    const [two, setTwo] = useState(false);
-    const [three, setThree] = useState(false);
-    const [four, setFour] = useState(false);
-    const [five, setFive] = useState(false);
+    const [fiveOne, setFiveOne] = useState(false);
+    const [fiveTwo, setFiveTwo] = useState(false);
+    const [fiveThree, setFiveThree] = useState(false);
+    const [fiveFour, setFiveFour] = useState(false);
+    const [fiveFive, setFiveFive] = useState(false);
 
     const stateMapping = {
-        one: setOne,
-        two: setTwo,
-        three: setThree,
-        four: setFour,
-        five: setFive
+        one: setFiveOne,
+        two: setFiveTwo,
+        three: setFiveThree,
+        four: setFiveFour,
+        five: setFiveFive
     }
 
     function toggle(name)
     {
+
         stateMapping[name](
             function(preValue)
             {
@@ -30,13 +31,13 @@ export default function FiveGrid()
     return (
         <div className="grid">
             <div className="grid-top">
-                <button className = {one ? "circle" : "selected"} onClick = {() => toggle("one")}></button>
-                <button className = {two ? "circle" : "selected"} onClick = {() => toggle("two")}></button>
-                <button className = {three ? "circle": "selected"} onClick = {() => toggle("three")}></button>
+                <button className = {fiveOne ? "circle" : "selected"} onClick = {() => toggle("one")}></button>
+                <button className = {fiveTwo ? "circle" : "selected"} onClick = {() => toggle("two")}></button>
+                <button className = {fiveThree ? "circle": "selected"} onClick = {() => toggle("three")}></button>
             </div>
             <div className="grid-bottom">
-                <button className = {four ? "circle": "selected"} onClick = {() => toggle("four")}></button>
-                <button className = {five ? "circle": "selected"} onClick = {() => toggle("five")}></button>
+                <button className = {fiveFour ? "circle": "selected"} onClick = {() => toggle("four")}></button>
+                <button className = {fiveFive ? "circle": "selected"} onClick = {() => toggle("five")}></button>
             </div>
         </div>
     )
